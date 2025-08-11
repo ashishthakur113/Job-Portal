@@ -26,7 +26,7 @@ function App() {
         <Route path='/browserjob' element={<BrowserJob/>}></Route>
         <Route path='/card' element={<Card/>}></Route>
         <Route path='/job/:id' element={<JobDetail/>}></Route>
-        <Route path='/jobupload' element={<UploadJob/>}></Route>
+        <Route path='/uploadjob' element={<UploadJob/>}></Route>
         <Route path='/signUp' element={<SignUp/>}></Route>
         <Route path='/logIn' element={<LogIn/>}></Route>
         <Route path='/profile' element={<UserProfile/>}></Route>

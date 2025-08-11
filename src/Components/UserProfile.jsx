@@ -20,10 +20,10 @@ export default function UserProfile() {
     experience: []
   });
 
-  const [activeSection, setActiveSection] = useState(null); // which section is open
+  const [activeSection, setActiveSection] = useState(null); 
   const [isSaving, setIsSaving] = useState(false);
+  const { name, email, mobile, city, collegeName, courseName, gender, dateofBirth, workStatus } = userData;
 
-  // sync formData from userData.profile whenever userData changes (after save)
   useEffect(() => {
     if (userData?.profile) {
       setFormData({
@@ -45,9 +45,6 @@ export default function UserProfile() {
     );
   }
 
-  // ---- basic fields from userData (kept same names as your original) ----
-  const { name, email, mobile, city, collegeName, courseName, gender, dateofBirth, workStatus } = userData;
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -58,7 +55,7 @@ export default function UserProfile() {
   };
 
   const handleCancelEdit = () => {
-    // revert local changes to last saved profile
+  
     if (userData?.profile) {
       setFormData({
         skills: userData.profile.skills || '',
@@ -76,9 +73,7 @@ export default function UserProfile() {
     e.preventDefault();
     setIsSaving(true);
     try {
-      
-      await updateUserProfile(formData);
-   
+       await updateUserProfile(formData);
       setActiveSection(null);
     } catch (err) {
       console.error("Error updating profile:", err);
