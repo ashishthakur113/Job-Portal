@@ -3,6 +3,8 @@
 **Tagline:** _"Connecting job seekers with employers, one skill at a time!"_
 
 ---
+🔗 **Live Demo:** [SkillHire Job Portal](https://skillhire-job-portal.netlify.app/)
+
 
 ## 📖 Overview
 
